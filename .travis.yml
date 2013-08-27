@@ -8,7 +8,7 @@ perl:
   - "5.18"
 
 before_install:
-  - sudo apt-get install automake libxmu-dev libxmu6 libxmu-headers libxmuu1 xpra xserver-xorg-video-dummy freeglut3-dev
+  - sudo apt-get install automake libxmu-dev libxmu6 libxmu-headers libxmuu1 xpra xserver-xorg-video-dummy freeglut3-dev mesa-utils
   - "xpra --xvfb=\"Xorg +extension GLX -config `pwd`/dummy.xorg.conf -logfile ${HOME}/.xpra/xorg.log\"  start :9"
 
 install:
