@@ -13,6 +13,8 @@ before_install:
 
 install:
   - export DISPLAY=:9
+  - ps -ef|grep xpra
+  - glxinfo
   - perl Makefile.PL verbose interface=FREEGLUT
   - make
   - sudo make install
